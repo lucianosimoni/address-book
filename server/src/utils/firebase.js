@@ -11,12 +11,12 @@ dotenv.config();
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: "react-address-book-c5c88.firebaseapp.com",
-  projectId: "react-address-book-c5c88",
-  storageBucket: "react-address-book-c5c88.appspot.com",
-  messagingSenderId: "555602749770",
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
-  measurementId: "G-Y147ND4850",
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
   databaseURL: process.env.FIREBASE_DATABASE_URL,
 };
 
