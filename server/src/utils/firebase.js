@@ -52,6 +52,7 @@ export async function signup(username, email, password) {
     .then((userCredential) => {
       const { uid, email } = userCredential.user;
 
+      // Creates initial data inside the newly created user.
       set(ref(database, `users/${uid}`), {
         contacts: {},
         name: username,
@@ -69,9 +70,4 @@ export async function signup(username, email, password) {
           return { error: { code: error.code } };
       }
     });
-}
-
-export async function createContact(userUID, data) {
-  const contactsRef = ref(database, `/users/${userUID}/contacts/`);
-  push(contactsRef, data);
 }
