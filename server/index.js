@@ -2,12 +2,12 @@ import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-import firebaseRouter from "./src/routes/firebase.js";
-
 dotenv.config();
 
 const app = express();
 const port = 4000;
+
+import firebaseRouter from "./src/routes/firebase.js";
 
 app.use(morgan("dev"));
 app.use(bodyParser.json());
